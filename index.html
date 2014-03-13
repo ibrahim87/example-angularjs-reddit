@@ -1,0 +1,40 @@
+<!doctype html>
+<html data-ng-app="mattca" data-no-touch>
+	<head>
+		<meta charset="UTF-8">
+		<title>Example: Reddit Incoming with AngularJS, GreenSock, and Topcoat</title>
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/css/topcoat-desktop-light.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<!-- icomatic displays the github logo -->
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/topcoat-icons/0.2.0/font/icomatic.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<!-- If you load jQuery before Angular, Angular will use jQuery -->
+		<script src="http://code.jquery.com/jquery-latest.min.js" ></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/controllers.js"></script>
+		<script src="assets/js/services.js"></script>
+	</head>
+	<body data-ng-controller="AppCtrl">
+		<div id="github" class="icomatic social"><a href="https://github.com/matthewca/example-angularjs-reddit">github</a></div>
+		<div id="twitter" class="icomatic social"><a href="http://www.twitter.com/mstate">twitter</a></div>
+		<header>
+			<h1>Reddit Incoming</h1>
+			<div id="filter"><input type="search" value="" placeholder="filter" class="topcoat-search-input--large" ng-model="filter"></div>
+		</header>
+		<nav>
+			<label class="topcoat-switch">
+				<input type="checkbox" class="topcoat-switch__input" ng-model="on" data-ng-checked="{{on}}">
+				<div class="topcoat-switch__toggle"></div>
+			</label>
+		</nav>
+		<section>
+			<ul>
+				<li class="gs-animation" data-ng-repeat="d in data | filter:filter">
+					<a href="{{d.data.url}}" target="_blank">{{d.data.title}}</a> <a href="http://www.reddit.com{{d.data.permalink}}" target="_blank">[r]</a>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>

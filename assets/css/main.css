@@ -1,0 +1,67 @@
+html {
+	font-size: 16px;
+	overflow-y: scroll;
+	min-width: 41.25rem;
+}
+body {
+	font-size: 1rem;
+	color: #464646;
+}
+a {
+	color: #181919;
+	text-decoration: none;
+	transition-property: color;
+	transition-duration: 0.2s;
+}
+a:hover {
+	color: #288edf;
+}
+header {
+	background-color: #FFF;
+	height: 8rem;
+	padding: 0 1.25rem;
+	display:table;
+	width: 100%;
+	box-sizing: border-box;
+	z-index:1;
+	position: relative;
+}
+header h1 {
+	margin: 0;
+	font-size: 3.75em;
+	display: table-cell;
+	vertical-align: middle;
+}
+#filter {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+nav {
+	float:right;
+	margin: 0.625rem 1.25rem;
+}
+section {
+	color: #181919;
+}
+ul {
+	margin-top: 0;
+	margin-right: 7.75em;
+}
+li {
+	opacity: 1;
+	line-height: 1.4em;
+	margin: 1em 0;
+}
+.social {
+	color: #181919;
+	position: fixed;
+	font-size: 2em;
+}
+#github, #twitter {
+	bottom: 0.625rem;
+	right: 1.25rem;
+}
+#twitter {
+	right: 3.875rem;
+}
