@@ -1,4 +1,5 @@
-//this module is designed to work with the whole applicatione
+//this module is designed to work with the whole application
+//mattca depends on the JSONService and ngAnimate modules
 var app = angular.module('mattca', ['JSONService','ngAnimate']);
 
 //root variable keeps track of initial load (probably a better way of doing this)
